@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to left, blue, lightblue);
+    height: 100vh;
+}
+.container {
+    background-size: cover;
+    padding: 200px 40px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.container h1 {
+    width: 1000px;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+.container p {
+    max-width: 50%;
+    margin: 40px auto;
+    font-size: 15px;
+    font-weight: 300;
+}
+.emailBox {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+.emailBox i {
+    background-color: #2f3542;
+    width: 60px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    align-self: center;
+
+}
+.textBox, .btn {
+    border: none;
+    outline: none;
+    padding: 0;
+}
+.textBox {
+    width: 0px;
+    transition: 0.6s;
+}
+.emailBox:hover > .textBox, .textBox:focus{
+    width: 260px;
+    padding: 0 10px;
+}
+.btn{
+    background-color: #2f3542;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+       padding: 100px 20px;
+    }
+   
+    .container h1 {
+       width: 100%;
+       font-size: 30px;
+    }
+   
+    .container p {
+       max-width: 80%;
+       font-size: 14px;
+    }
+   
+    .emailBox {
+       height: 40px;
+    }
+   
+    .emailBox i {
+       width: 40px;
+       font-size: 20px;
+       line-height: 40px;
+    }
+   
+    .textBox {
+       width: 100%;
+       padding: 0 10px;
+    }
+   
+    .btn {
+       padding: 0 10px;
+    }
+   }
