@@ -7,11 +7,11 @@ import Logo from './Logo';
 
 const MenuItems = [
     { name: 'Inicio', link: '/' },
-    { name: 'Produtos', link: '/products' },
-    { name: 'Soluçoes', link: '/solutions' },
-    { name: 'Sobre', link: '/about' },
-    { name: 'Contato', link: '/contact' },
-    { name: 'Newsletter', link: '/newsLetter' },
+    { name: 'Produtos', link: '/pages/products' },
+    { name: 'Soluçoes', link: '/pages/solutions' },
+    { name: 'Sobre', link: '/pages/about' },
+    { name: 'Contato', link: '/pages/contact' },
+    { name: 'Newsletter', link: '/pages/newsLetter' },
   ];
 
 const Navbar: React.FC = () => {
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className='pt-7 md:pt-0 md:flex flex-row justify-between items-center pl-2 md:mx-2 max-w-screen'>
+      <div className='pt-6 md:pt-0 md:flex flex-row justify-between items-center pl-20 md:mx-2 max-w-screen'>
 
         <div className='flex flex-row justify-center items-center gap-2 md:gap-4 lg:gap-7 text-md font-medium'>
           {MenuItems.map((item) => (

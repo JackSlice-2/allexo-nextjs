@@ -10,7 +10,7 @@ const page = () => {
     </div>
     <div id="nav">
 
-<div class="navBottom">
+<div class="navBottom text-3xl py-4">
     <h3 class="menuItem">Hardware</h3>
     <h3 class="menuItem">Software</h3>
 </div>
