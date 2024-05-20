@@ -26,24 +26,23 @@ const page = () => {
     <Navbar />
     <div>
     <div className="parallax">
-        <div className="container">
-            <h1>Allexo Tecnologia</h1>
+        <div className="flex flex-col p-[3%] gap-5 justify-center">
+            <h1 className='text-white text-5xl font-bold p-2'>Allexo Tecnologia</h1>
             {aboutText.map((section, index) => (
-              <div key={index} className="row">
-                <div className="iconBox">
-                  <div className="icon">
+              <div key={index} className="row flex p-6 z-10 h-[100%] w-[45%] justify-center bg-slate-100/60">
+                <div className="max-h-[100px]">
+                  <div className="icon text-5xl text-blue-800 p-3 bg-white justify-center">
                     {section.icon}
                   </div>
                 </div>
-                <span>{section.title}</span>
-                <div className="textBox">
+                <span className='max-h-[100px] flex flex-col justify-center items-center text-black m-5 text-xl font-semibold'>{section.title}</span>
+                <div className="textBox max-h-[80px] flex flex-col justify-center items-center text-black m-5 font-semibold text-md">
                   <div className="subTitle">
                     <p>{section.text}</p>
                   </div>
                 </div>
               </div>
             ))}
-
     </div>
 
     <div className="imgObjects"></div>
