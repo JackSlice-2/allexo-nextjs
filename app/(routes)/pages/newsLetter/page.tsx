@@ -6,17 +6,15 @@ import { BsEnvelopeAtFill } from 'react-icons/bs'
 const page = () => {
   return (
     <>
-    <div>
     <Navbar />
-    </div>
-    <div className="container bg-cover text-center text-white flex justify-center ml-52 mt-52">
+    <div className="container bg-cover text-center text-white flex justify-center ml-20 lg:ml-52 mt-52">
     <form name="newsLetter" method="POST" data-netlify="true">
-        <h1 className='w-[1000px] text-5xl font-semibold text-center ml-64'>
+        <h1 className='lg:w-[1000px] text-5xl font-semibold text-center py-10 lg:ml-64'>
             Fique por dentro da últimas tendências do mercado de IoT.
         <br/>
             Increva-se para receber nossa newsletter.
         </h1>
-        <p className='max-w-[50%] text-lg font-medium ml-96'>
+        <p className='lg:max-w-[50%] text-lg font-medium lg:ml-96 pb-5'>
             Ao inserir seu e-mail, você concorda em receber a newsletter IoTHINGS da Allexo. Você pode cancelar sua inscrição a qualquer momento. Basta seguir as instruções fornecidas na mensagem de e-mail enviada.
         </p>    
         <div className="emailBox h-10 flex justify-center">

@@ -1,13 +1,12 @@
 'use client';
 
 import './root.css';
-import { useState } from 'react'; // Import useState
+import { useState } from 'react';
 import { carouselText, thumbnailText } from "./data";
 
 export default function HomePage() {
-  const [currentCarouselItem, setCurrentCarouselItem] = useState(0); // Initialize state
+  const [currentCarouselItem, setCurrentCarouselItem] = useState(0);
 
-  // Define nextCaroselItem inside HomePage
   const nextCaroselItem = (index: number) => {
     setCurrentCarouselItem(index);
   };
@@ -19,18 +18,22 @@ export default function HomePage() {
           {carouselText[currentCarouselItem] && (
             <div key={currentCarouselItem} className="item w-[100%] h-[100%] absolute inset-0">
               <img alt="" className='w-full h-full object-cover' src={carouselText[currentCarouselItem].imageUrl}/>
-              <div className="content text-sm absolute top-16 max-w-[80%] pl-20 text-white box-border -translate-x-1/2 pr-[20%]">
-                <div className="title text-6xl font-bold">{carouselText[currentCarouselItem].name}</div>
-                <div className="topic text-7xl font-bold text-orange-600" id={`topic-${currentCarouselItem}`}>{carouselText[currentCarouselItem].topic}</div>
-                <div className="des text-2xl">{carouselText[currentCarouselItem].des}</div>
-                <div className="buttons gap-1 p-5">
+              <div className="content text-sm absolute top-16 max-w-[55%] pl-20 text-white box-border">
+                <div className="title lg:text-6xl text-4xl font-bold">
+                  {carouselText[currentCarouselItem].name}
+                </div>
+                <div className="topic text-3xl lg:text-7xl font-bold text-orange-600" id={`topic-${currentCarouselItem}`}>
+                  {carouselText[currentCarouselItem].topic}</div>
+                <div className="des text-xl lg:text-2xl">
+                  {carouselText[currentCarouselItem].des}
+                  </div>
+                <div className="buttons p-5 grid gap-1 mt-5">
                   {carouselText[currentCarouselItem].buttons.map((button, btnIndex) => (
                     <button key={`${currentCarouselItem}-${btnIndex}`} 
                     className='bg-white text-black pointer-events-auto'
                     aria-label={button.name}>
                       {button.name}
                     </button>
-                    
                   ))}
                 </div>
               </div>
@@ -39,7 +42,7 @@ export default function HomePage() {
         </div>
 
           {/* Thumbnails */}
-          <div className="thumbnail absolute bottom-20 left-1/2 gap-5 flex z-50">
+          <div className="thumbnail absolute bottom-20 lg:left-1/2 gap-5 flex z-50 ml-10">
             {thumbnailText.map((item, index) => (
               <button key={index} onClick={() => nextCaroselItem(index)}>
                 <div className="item w-40 h-64 relative">

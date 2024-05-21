@@ -1,77 +1,8 @@
 import React from 'react'
 import './contact.css'
 import Navbar from '@/app/components/Navbar'
-/*
-  <script src="../Globals/menu/menu.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var checkboxes = document.querySelectorAll('input[name="SubjectOption"]');
-            var subjectInput = document.getElementById('subject');
-        
-            checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    if (this.checked) {
-                        subjectInput.value = this.value;
-                    } else {
-                        subjectInput.value = "";
-                    }
-                });
-            });
-        });
-        
+import { contactText } from './data'
 
-
-        function sendMessage(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-
-    // Gather form data
-    var formData = {
-        title: document.querySelector('input[name="name"]').value,
-        email: document.querySelector('input[name="email"]').value,
-        prefix: document.querySelector('input[name="prefix"]').value,
-        number: document.querySelector('input[name="number"]').value,
-        subject: document.querySelector('input[name="Subject"]').value, // Ensure this is correctly set based on the selected radio button
-        message: document.querySelector('textarea[name="message"]').value
-    };
-
-    // Send data to Flask server
-    fetch('http://127.0.0.1:5000/receive_message', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData), // Serialize form data into JSON format
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Success:', data);
-        showToast('Message sent successfully!');
-        document.getElementById('contactForm').reset();
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        showToast(error.message, true); // Show error toast
-    });
-}
-
-function showToast(message, isError = false) {
-    var toast = document.createElement('div');
-    toast.className = 'toast';
-    toast.textContent = message;
-    if (isError) {
-        toast.style.backgroundColor = '#f44336'; // Red background for errors
-    }
-    document.body.appendChild(toast);
-    toast.classList.add('show');
-    setTimeout(function(){ toast.classList.remove('show'); }, 3000);
-}
-
-            </script> */
 const page = () => {
   return (
     <>
@@ -82,43 +13,20 @@ const page = () => {
             <p>A Allexo é uma empresa de tecnologia fundada em 2016 com o objetivo de desenvolver soluções de Internet das Coisas para pequenas, médias e grandes indústrias visando tornar acessível as modernas tecnologias da Indústria 4.0 para qualquer tipo de empresa, para empresas de qualquer tamanho.</p>
         </div>
         <div class="container">
-            <div class="contactInfo">
-                <div class="box">
-                    <div class="icon"><i aria-hidden="true" class="fa fa-map-marker"></i></div>
-                    <div class="text">
-                        <h3>Address</h3>
-                        <p>porto alegre, Canoas numero 1444</p>
-                    </div>
+           
+        <div className="contactInfo">
+            {contactText.map((info, index) => (
+              <div key={index} className="box">
+                <div className="icon">
+                    {info.icon}
                 </div>
-                <div class="box">
-                    <div class="icon"><i aria-hidden="true" class="fa fa-phone"></i></div>
-                    <div class="text">
-                        <h3>Phone</h3>
-                        <p>857842 1444</p>
-                    </div>
+                <div className="text">
+                  <h3>{info.title}</h3>
+                  <p>{info.text}</p>
                 </div>
-                <div class="box">
-                    <div class="icon"><i aria-hidden="true" class="fa fa-envelope-o"></i></div>
-                    <div class="text">
-                        <h3>email</h3>
-                        <p>435346@432q2562.com</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icon"><i aria-hidden="true" class="fa fa-whatsapp"></i></div>
-                    <div class="text">
-                        <h3>WhatsApp</h3>
-                        <p>435346@432q2562.com</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icon"><i aria-hidden="true" class="fa fa-telegram"></i></div>
-                    <div class="text">
-                        <h3>Telegram</h3>
-                        <p>435346@432q2562.com</p>
-                    </div>
-                </div>
-            </div>
+              </div>
+            ))}
+          </div>
 
             <div class="contactForm">
                 <form id="contactForm" method="POST" onsubmit="sendMessage(event)">

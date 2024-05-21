@@ -29,7 +29,7 @@ const page = () => {
         <div className="flex flex-col p-[3%] gap-5 justify-center">
             <h1 className='text-white text-5xl font-bold p-2'>Allexo Tecnologia</h1>
             {aboutText.map((section, index) => (
-              <div key={index} className="row flex p-6 z-10 h-[100%] w-[45%] justify-center bg-slate-100/60">
+              <div key={index} className="row flex p-6 z-10 lg:h-[100%] lg:w-[45%] justify-center bg-slate-100/60">
                 <div className="max-h-[100px]">
                   <div className="icon text-5xl text-blue-800 p-3 bg-white justify-center">
                     {section.icon}
