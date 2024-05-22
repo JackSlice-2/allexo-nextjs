@@ -7,7 +7,7 @@ const page = () => {
   return (
     <>
     <Navbar />
-    <section class="contact">
+    <section class="contact  text-black">
         <div class="content">
             <h2>Quem somos</h2>
             <p>A Allexo é uma empresa de tecnologia fundada em 2016 com o objetivo de desenvolver soluções de Internet das Coisas para pequenas, médias e grandes indústrias visando tornar acessível as modernas tecnologias da Indústria 4.0 para qualquer tipo de empresa, para empresas de qualquer tamanho.</p>

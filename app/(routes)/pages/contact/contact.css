@@ -16,11 +16,9 @@
 .contact .content h2{
     font-size: 40px;
     font-weight: 500;
-    color: #fff;
 }
 .contact .contact p{
     font-weight: 300;
-    color: #fff;
     font-size: 20px;
 }
 .container{
@@ -50,9 +48,9 @@
     background-color: #00bcd4;
     color: #fff;
 }
+.contactInfo .box:hover .text p,
 .contactInfo .box:hover .text h3{
     color: #00bcd4;
-    background-color: #00bcd4;
 }
 .contactInfo .box .icon{
     min-width: 60px;

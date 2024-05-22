@@ -1,13 +1,12 @@
 import React from 'react'
 import Navbar from '@/app/components/Navbar'
 import './products.css'
+import { featureText } from '@/app/data/ProductData'
 
 const page = () => {
   return (
     <>
-    <div>
     <Navbar />
-    </div>
     <div id="nav">
 
 <div class="navBottom text-3xl py-4">
@@ -38,33 +37,16 @@ const page = () => {
 </div>
 
 <div class="features">
-<div class="feature">
-    <i class="bi bi-ethernet featureIcon"></i>
-    <span class="featureTitle">Redes de Campo</span>
-    <span class="featureDesc">Portas de comunicação RS-232, RS-485 e ETHERNET para conexão a dispositivos de campo utilizando protocolo MODBUS-RTU e TCP/IP</span>
+{featureText.map((feature, index) => (
+          <div key={index} className="feature">
+            <div className='featureIcon'>
+            {feature.icon}
+            </div>
+            <span className="featureTitle">{feature.title}</span>
+            <span className="featureDesc">{feature.desc}</span>
+          </div>
+        ))}
 </div>
-<div class="feature">
-    <i class="bi bi-cloud-download featureIcon"></i>
-    <span class="featureTitle">Ampla conectividade</span>
-    <span class="featureDesc">Gateways com capacidade de conexão via rede WiFi, ETHERNET cabeada, 2G, 3G, 4G, Lora e satélite via Starlink</span>
-</div>
-<div class="feature">
-    <i class="bi bi-share featureIcon"></i>
-    <span class="featureTitle">Modularidade de IO&aposs</span>
-    <span class="featureDesc">Diversas combinações de módulos para interface com sensores de campo com entradas e saídas digitais e analógicas</span>
-</div>
-<div class="feature">
-    <i class="bi bi-lock featureIcon"></i>
-    <span class="featureTitle">Comunicação segura</span>
-    <span class="featureDesc">Envio de dados usando protocolo criptografado MQTT garantindo a segurança dos dados.</span>
-</div>
-</div>
-
-<div id="myModal" class="modal">
-<span class="close">&times;</span>
-<img alt="" class="modal-content" id="img01"/>
-</div>
-
 
 <div class="product" id="product">
 <img alt="" src="../image/products/productsHardwareSecondary.webp" class="productImg myImg"/>

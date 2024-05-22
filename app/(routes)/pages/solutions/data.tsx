@@ -3,7 +3,12 @@ import { BsLightningChargeFill } from "react-icons/bs";
 import { GiWaterDrop } from "react-icons/gi";
 import { IoCogSharp } from "react-icons/io5";
 
-export const solutionsText = [
+export const solutionsText = {
+    title: 'Soluções',
+    text: 'A Allexo possui soluções customizadas para atender diversas verticais.'
+  }
+
+export const solutionBoxText = [
   {
     title: 'Gerenciamento Remoto de Dispositivos',
     text: 'Monitore remotamente, em tempo real, máquinas e equipamentos. Crie dashboards personalizados e configure alarmes para qualquer uma das variáveis monitoradas.',

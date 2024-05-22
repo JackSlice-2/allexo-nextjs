@@ -1,13 +1,8 @@
 body{
-    overflow: hidden;   
+    overflow-x: hidden;   
 }
-.parallax{
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
+.parallax {
     background-image: url(/image/1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .imageObjects{
     position: absolute;
@@ -59,46 +54,4 @@ body{
     background-repeat: no-repeat;
     top: 8%;
     left: 13%;
-}
-.row {
-    align-items: flex-start;
-    border-radius: 10px;
-    border: 2px solid black;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-}
-.row:hover{
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-}
-.icon{
-    border: 2px solid black;
-    border-radius: 30%;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (max-width: 768px){
-    .row{
-        width: 90%;
-    }
-    .container{
-        padding: 5%;
-    }
-    .iconBox{
-        max-height: 50px;
-    }
-    .textBox{
-        max-height: 50px;
-        font-size: 10px;
-    }
-    i{
-        font-size: 30px;
-    }
-    span{
-        font-size: 15px;
-    }
-    .imageObjects{
-        height: 100%;
-        width: 1300px;
-        margin-left: -500px;
-    }
 }
